@@ -7,6 +7,7 @@ import "./index.css";
 import LoadMoreData from "./components/load-more-data";
 import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
+import QRCodeGenerator from './components/qr-code-generator'
 
 function App() {
   return (
@@ -18,13 +19,17 @@ function App() {
       {/* Star Rating component */}
       <StarRating />
       {/* Image Slider component */}
-      <ImageSlider url={"https://picsum.photos/v2/list"}
+      <ImageSlider
+        url={"https://picsum.photos/v2/list"}
         page={"1"}
-        limit={"10"}/>
+        limit={"10"}
+      />
       {/* Load-More-Data component */}
       <LoadMoreData />
       {/* Tree view component/menu UI component / recursive navigation menu */}
       <TreeView menus={menus} />
+      {/* QR Code Generator component */}
+      <QRCodeGenerator />
     </>
   );
 }
