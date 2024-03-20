@@ -2,7 +2,7 @@ import { useState } from "react"; // Importing the useState hook from React for 
 import { FaStar } from "react-icons/fa"; // Importing the FaStar component from react-icons library
 import "./styles.css"; // Importing CSS styles for the component
 
-export default function StarRating({ noOfStars = 5 }) { // Defining a functional component named StarRating, with a default prop for the number of stars
+export default function StarRating({ noOfStars = 10 }) { // Defining a functional component named StarRating, with a default prop for the number of stars
   const [rating, setRating] = useState(0); // State variable for the current rating, initialized with 0
   const [hover, setHover] = useState(0); // State variable for the hovered rating, initialized with 0
 
