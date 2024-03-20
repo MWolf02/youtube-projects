@@ -22,3 +22,9 @@
     width: 200px;
     height: 200px;
 }
+
+button{
+    padding: 8px;
+    color: white;
+    background-color: black;
+}

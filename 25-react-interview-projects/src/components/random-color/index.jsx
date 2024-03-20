@@ -1,75 +1,72 @@
-import { useEffect } from "react"; // Importing the useEffect hook from React for handling side effects
-import { useState } from "react"; // Importing the useState hook from React for managing state
+import { useEffect, useState } from "react";
 
-export default function RandomColor() { // Defining a functional component named RandomColor
-  const [typeOfColor, setTypeOfColor] = useState("hex"); // State variable for type of color format, initialized with "hex"
-  const [color, setColor] = useState("#000000"); // State variable for the generated color, initialized with black in hexadecimal format
+export default function RandomColor() {
+  const [typeOfColor, setTypeOfColor] = useState("hex");
+  const [color, setColor] = useState("#000000");
 
-  function randomColorUtility(length) { // Function to generate random numbers for color creation
+  function randomColorUtility(length) {
     return Math.floor(Math.random() * length);
   }
 
-  function handleCreateRandomHexColor() { // Function to generate a random hexadecimal color
-    const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"]; // Array of hexadecimal characters
-    let hexColor = "#"; // Initialize hexColor with #
+  function handleCreateRandomHexColor() {
+    // #678765
+    const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+    let hexColor = "#";
 
-    for (let i = 0; i < 6; i++) { // Generating random hex digits
-      hexColor += hex[randomColorUtility(hex.length)]; // Concatenating random hex digits
+    for (let i = 0; i < 6; i++) {
+      hexColor += hex[randomColorUtility(hex.length)];
     }
-
-    setColor(hexColor); // Updating the color state with the generated hexadecimal color
+    setColor(hexColor);
   }
 
-  function handleCreateRandomRGBColor() { // Function to generate a random RGB color
-    const r = randomColorUtility(256); // Generating random values for red component
-    const g = randomColorUtility(256); // Generating random values for green component
-    const b = randomColorUtility(256); // Generating random values for blue component
+  function handleCreateRandomRgbColor() {
+    const r = randomColorUtility(256);
+    const g = randomColorUtility(256);
+    const b = randomColorUtility(256);
 
-    setColor(`rgb(${r}, ${g}, ${b})`); // Updating the color state with the generated RGB color
+    setColor(`rgb(${r},${g}, ${b})`);
   }
 
-  useEffect(() => { // Effect hook to generate a random color when the typeOfColor state changes
-    if (typeOfColor === "rgb") handleCreateRandomRGBColor(); // If typeOfColor is "rgb", generate a random RGB color
-    else handleCreateRandomHexColor(); // Otherwise, generate a random hexadecimal color
-  }, [typeOfColor]); // Dependency array to re-run the effect when typeOfColor changes
+  useEffect(() => {
+    if (typeOfColor === "rgb") handleCreateRandomRgbColor();
+    else handleCreateRandomHexColor();
+  }, [typeOfColor]);
 
   return (
     <div
-      className="container"
       style={{
         width: "100vw",
         height: "100vh",
         background: color,
       }}
     >
-      <h1>Project 2</h1> {/* Heading for the project */}
-      <button onClick={() => setTypeOfColor("hex")}>Create HEX color</button> {/* Button to set typeOfColor to "hex" */}
-      <button onClick={() => setTypeOfColor("rgb")}>Create RGB color</button> {/* Button to set typeOfColor to "rgb" */}
+      <h1>Project 2 - Random Color Generator</h1>
+      <button onClick={() => setTypeOfColor("hex")}>Create HEX Color</button>
+      <button onClick={() => setTypeOfColor("rgb")}>Create RGB Color</button>
       <button
         onClick={
           typeOfColor === "hex"
-            ? handleCreateRandomHexColor // If typeOfColor is "hex", generate a random hexadecimal color
-            : handleCreateRandomRGBColor // If typeOfColor is "rgb", generate a random RGB color
+            ? handleCreateRandomHexColor
+            : handleCreateRandomRgbColor
         }
       >
-        Generate random color
-      </button> {/* Button to generate a random color based on the current typeOfColor */}
+        Generate Random Color
+      </button>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          color: "white",
-          fontSize: "50px",
+          color: "#fff",
+          fontSize: "60px",
           marginTop: "50px",
           flexDirection: "column",
           gap: "20px",
         }}
       >
-        <h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3> {/* Displaying the current color format */}
-        <h1>{color}</h1> {/* Displaying the generated color */}
+        <h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3>
+        <h2>{color}</h2>
       </div>
     </div>
   );
 }
-

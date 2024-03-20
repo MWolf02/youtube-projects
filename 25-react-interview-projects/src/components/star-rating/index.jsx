@@ -20,7 +20,7 @@ export default function StarRating({ noOfStars = 10 }) { // Defining a functiona
 
   return (
     <div className="star-rating"> {/* Main wrapper for the star rating component */}
-      <h1>Project 3</h1> {/* Heading for the project */}
+      <h1>Project 3 - Star Rating</h1> {/* Heading for the project */}
       {[...Array(noOfStars)].map((_, index) => { // Generating an array of stars based on the number of stars prop
         index += 1; // Incrementing index by 1 to start from 1 instead of 0
         return (
@@ -34,6 +34,7 @@ export default function StarRating({ noOfStars = 10 }) { // Defining a functiona
           />
         );
       })}
+      <br />
     </div>
   );
 }

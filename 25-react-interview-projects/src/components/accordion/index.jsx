@@ -33,7 +33,7 @@ export default function Accordion() {
     <div className="wrapper">
       {" "}
       {/* Main wrapper for the component */}
-      <h1>Project 1</h1> {/* Heading for the project */}
+      <h1>Project 1 - Accordion: Single & Multiple Selection</h1> {/* Heading for the project */}
       <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
         {/* Button to toggle multiple selection */}
         {buttonText}
@@ -79,9 +79,4 @@ export default function Accordion() {
   );
 }
 
-{
-  /* {selected === dataItem.id ||
-              multiple.indexOf(dataItem.id) !== -1 ? (
-                <div className="content">{dataItem.answer}</div>
-              ) : null} */
-}
+
