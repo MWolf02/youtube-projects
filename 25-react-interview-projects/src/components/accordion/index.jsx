@@ -64,10 +64,10 @@ export default function Accordion() {
                 </div>
                 {enableMultiSelection
                   ? multiple.indexOf(dataItem.id) !== -1 && ( // If multi-selection enabled and item selected, display content
-                      <div className="content">{dataItem.answer}</div>
+                      <div className="content-para">{dataItem.answer}</div>
                     )
                   : selected === dataItem.id && ( // If single selection enabled and item selected, display content
-                      <div className="content">{dataItem.answer}</div>
+                      <div className="content-para">{dataItem.answer}</div>
                     )}
               </div>
             )
