@@ -15,8 +15,8 @@ export default function LoadMoreData() {
 
       const response = await fetch(
         // Fetching data from the API
-        `https://dummyjson.com/products?limit=20&skip=${
-          count === 0 ? 0 : count * 20
+        `https://dummyjson.com/products?limit=10&skip=${
+          count === 0 ? 0 : count * 10
         }` // Constructing URL with pagination parameters
       );
       const result = await response.json(); // Parsing the response data as JSON
@@ -42,7 +42,7 @@ export default function LoadMoreData() {
 
   useEffect(() => {
     // Effect hook to check if the maximum number of products is reached
-    if (products && products.length === 100) setDisableButton(true); // If the number of products reaches 100, disable the load more button
+    if (products && products.length === 40) setDisableButton(true); // If the number of products reaches 100, disable the load more button
   }, [products]);
 
   if (loading) {
@@ -80,7 +80,7 @@ export default function LoadMoreData() {
           {/* Load more button */}
           Load More Products
         </button>
-        {disableButton ? <p>You have reached 100 products</p> : null}
+        {disableButton ? <p>You have reached max products</p> : null}
         {/* Display message when maximum products limit is reached */}
       </div>
     </div>
