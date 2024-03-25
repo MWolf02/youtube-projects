@@ -20,7 +20,7 @@ export default function LightDarkMode() {
   // Returning JSX to render the LightDarkMode component.
   return (
     <div className="light-dark-mode" data-theme={theme}>
-      <h1>Project 8 - Light/Dark Mode</h1>{" "}
+      <h1 id="LightDarkMode">Project 8 - Light/Dark Mode</h1>{" "}
       {/* Rendering a heading for the project */}
       <div className="container">
         <h2>Hello World!</h2> {/* Rendering a greeting */}

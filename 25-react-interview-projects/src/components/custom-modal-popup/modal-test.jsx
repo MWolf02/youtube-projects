@@ -24,7 +24,7 @@ export default function ModalTest() {
   return (
     <div>
       {/* Rendering a heading for the project */}
-      <h1>Project 10 - Custom Modal Pop-Up</h1>{" "}
+      <h1 id="ModalTest">Project 10 - Custom Modal Pop-Up</h1>{" "}
       {/* Rendering a button that triggers the modal toggle */}
       <button onClick={handleToggleModalPopup} className="popup-btn">
         Open Modal Popup

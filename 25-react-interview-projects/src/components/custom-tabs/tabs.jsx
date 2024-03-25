@@ -16,7 +16,7 @@ export default function Tabs({ tabsContent, onChange }) {
   // Returning JSX to render the Tabs component.
   return (
     <div className="wrapper">
-      <h1>Project 9 - Custom Tabs</h1>{" "}
+      <h1 id="TabTest">Project 9 - Custom Tabs</h1>{" "}
       {/* Rendering a heading for the project */}
       <div className="heading">
         {/* Mapping through each tab item in tabsContent array and rendering tab items */}

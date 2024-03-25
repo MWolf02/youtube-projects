@@ -9,7 +9,7 @@ export default function TreeView({ menus = [] }) {
   return (
     <div>
       {/* Rendering a heading for the project */}
-      <h1>Project 6 - Navigation Bar</h1>
+      <h1 id="TreeView">Project 6 - Navigation Bar</h1>
       <div className="tree-view-container">
         {/* Rendering the MenuList component to display the navigation menu */}
         <MenuList list={menus} />

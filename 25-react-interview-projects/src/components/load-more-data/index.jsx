@@ -53,7 +53,7 @@ export default function LoadMoreData() {
   return (
     // Rendering the LoadMoreData component
     <div className="load-more-container">
-      <h1>Project 5 - Load More Data</h1>
+      <h1 id="LoadMoreData">Project 5 - Load More Data</h1>
       {/* Container for the load more data section */}
       <div className="products-container">
         {/* Container for displaying products */}

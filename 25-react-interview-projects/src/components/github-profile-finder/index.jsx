@@ -45,7 +45,7 @@ export default function GithubProfileFinder() {
   return (
     <div className="github-profile-container">
       {/* Rendering a heading for the project */}
-      <h1>Project 11 - Github Profile Finder</h1>
+      <h1 id="GithubProfileFinder">Project 11 - Github Profile Finder</h1>
       {/* Form to search for Github username */}
       <form className="input-wrapper" onSubmit={handleSubmit}>
         <input

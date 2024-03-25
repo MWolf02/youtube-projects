@@ -7,11 +7,12 @@
   background-color: #fff;
 }
 
-body{
+body {
   text-align: center;
+  
 }
 
-h1{
+h1 {
   border-top: 2px dashed black;
   margin: 50px;
   padding: 25px;
@@ -21,3 +22,36 @@ h1{
 
 
 
+button {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  padding: 8px .8em;
+  text-align: center;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(34, 38, 41);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  /* Styles for screens smaller than or equal to 768px (e.g., tablets and mobile devices) */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for screens between 769px and 1024px (e.g., smaller desktop screens and tablets in landscape mode) */
+}
+
+@media screen and (min-width: 1025px) {
+  /* Styles for screens larger than or equal to 1025px (e.g., desktop screens) */
+  
+}

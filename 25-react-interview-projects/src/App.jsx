@@ -12,13 +12,18 @@ import LightDarkMode from "./components/light-dark-mode";
 import ScrollIndicator from "./components/scroll-indicator";
 import TabTest from "./components/custom-tabs/tabs-test";
 import ModalTest from "./components/custom-modal-popup/modal-test";
-import GithubProfileFinder from './components/github-profile-finder'
+import GithubProfileFinder from "./components/github-profile-finder";
 import SearchAutoComplete from "./components/search-autocomplete-with-api";
 import TicTacToe from "./components/tic-tac-toe";
+import FeatureFlagGlobalState from "./components/feature-flag/context";
+import FeatureFlags from "./components/feature-flag";
+import ScrollToSection from "./components/scroll-to-section";
 
 function App() {
   return (
     <>
+      <ScrollToSection />
+
       {/* Accordion component */}
       <Accordion />
 
@@ -60,10 +65,15 @@ function App() {
       <GithubProfileFinder />
 
       {/* Search Autocomplete component */}
-      <SearchAutoComplete/>
+      <SearchAutoComplete />
 
       {/* Tic Tac Toe component */}
       <TicTacToe />
+
+      {/* Feature Flag component */}
+      {/* <FeatureFlagGlobalState>
+        <FeatureFlags />
+      </FeatureFlagGlobalState> */}
     </>
   );
 }

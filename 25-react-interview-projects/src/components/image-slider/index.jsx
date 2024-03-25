@@ -57,7 +57,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   return (
     // Rendering the image slider component
     <div>
-      <h1>Project 4 - Image Slider</h1> {/* Header indicating the project name */}
+      <h1 id="ImageSlider">Project 4 - Image Slider</h1> {/* Header indicating the project name */}
       <div className="container">
         {/* Container for the image slider */}
         <BsArrowLeftCircleFill // Left arrow icon component for navigating to the previous slide

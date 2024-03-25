@@ -33,7 +33,7 @@ export default function Accordion() {
     <div className="wrapper">
       {" "}
       {/* Main wrapper for the component */}
-      <h1>Project 1 - Accordion: Single & Multiple Selection</h1> {/* Heading for the project */}
+      <h1 id="Accordion">Project 1 - Accordion: Single & Multiple Selection</h1> {/* Heading for the project */}
       <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
         {/* Button to toggle multiple selection */}
         {buttonText}

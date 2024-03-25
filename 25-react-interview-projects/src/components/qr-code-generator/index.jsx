@@ -3,6 +3,8 @@ import { useState } from "react";
 // Importing the QRCode component from the "react-qr-code" library.
 import QRCode from "react-qr-code";
 
+import './styles.css'
+
 // Defining and exporting the QRCodeGenerator component.
 export default function QRCodeGenerator() {
   // Declaring state variables for the QR code value and the input value.
@@ -19,8 +21,8 @@ export default function QRCodeGenerator() {
 
   // Returning JSX to render the QRCodeGenerator component.
   return (
-    <div>
-      <h1>Project 7 - QR Code Generator</h1>{" "}
+    <div className="QRCodeGenerator-container">
+      <h1 id="QRCodeGenerator">Project 7 - QR Code Generator</h1>{" "}
       {/* Rendering a heading for the project */}
       <div>
         {/* Input field for entering the value to generate QR code */}

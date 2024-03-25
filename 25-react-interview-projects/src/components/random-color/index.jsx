@@ -49,7 +49,7 @@ export default function RandomColor() {
         background: color,
       }}
     >
-      <h1>Project 2 - Random Color Generator</h1>{" "}
+      <h1 id="RandomColor">Project 2 - Random Color Generator</h1>{" "}
       {/* Rendering a heading for the project */}
       <button onClick={() => setTypeOfColor("hex")}>
         Create HEX Color

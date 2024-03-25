@@ -64,7 +64,7 @@ export default function SearchAutoComplete() {
   // Rendering JSX for the SearchAutoComplete component.
   return (
     <div className="search-autocomplete-container">
-      <h1>Project 12 - Search Autocomplete</h1>
+      <h1 id="SearchAutoComplete">Project 12 - Search Autocomplete</h1>
       {/* Rendering loading message if loading is true */}
       {loading ? (
         <h1>Loading.. please wait</h1>
